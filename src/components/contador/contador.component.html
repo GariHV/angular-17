@@ -1,0 +1,6 @@
+<p>Contador: {{precio.value}}</p>
+
+<button (click)="incrementar()">+1</button>
+<button [disabled]="precio.value <= 0" (click)="restar()">-1</button>
+<button (click)="reset()">reset</button>
+<button (click)="applyDiscount(5)">Descuento</button>
