@@ -9,6 +9,9 @@ import {HeaderComponent} from "../components/header/header.component";
 import {UserComponent} from "../components/user/user.component";
 import {FormsModule} from "@angular/forms";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {CantantesModule} from "./cantantes/cantantes.module";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatButton} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CantantesModule,
+    MatSlideToggleModule,
+    MatButton
   ],
   providers: [
     provideAnimationsAsync()

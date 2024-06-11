@@ -1,0 +1,33 @@
+<h1 class="container mt-2">Cantantes</h1>
+<ul class=" list-group">
+  <li
+    *ngFor="let singer of cantantesList;
+        let i = index;
+        let isFirst = first;
+        let isLast = last;"
+    class="list-group-item d-flex justify-content-between align-items-center"
+    [ngClass]="{
+        'list-group-item-primary': isFirst,
+        'list-group-item-dark': isLast
+        }"
+  >
+    <div>
+      {{ i + 1 }} -
+      {{ singer.name }} - {{ singer.age }}
+    </div>
+    <button class="btn btn-danger" matTooltip="Eliminar cantante">X</button>
+  </li>
+</ul>
+<ul class=" list-group" cdkDropList (cdkDropListDropped)="drop($event)">
+    @for (singer of cantantesList; track singer){
+  <li
+    class="list-group-item d-flex justify-content-between align-items-center"
+    cdkDrag
+  >
+    <div>
+      {{ singer.name }} - {{ singer.age }}
+    </div>
+    <button class="btn btn-danger" matTooltip="Eliminar cantante">X</button>
+  </li>
+    }
+</ul>

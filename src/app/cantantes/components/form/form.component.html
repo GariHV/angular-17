@@ -1,0 +1,13 @@
+
+<h1 class="container mt-2">Añadir Cantante</h1>
+
+<mat-card>
+  <mat-card-content>
+    <form>
+      <input type="text" name="name" placeholder="Name" class="form-control mb-2" [(ngModel)]="nuevoCantante.name">
+      <input type="text" name="age" placeholder="Age" class="form-control" [(ngModel)]="nuevoCantante.age">
+      <button class="btn btn-primary mt-3" (click)="addCantante()">Agregar</button>
+      <p class="mt-2">{{nuevoCantante | json}}</p>
+    </form>
+  </mat-card-content>
+</mat-card>

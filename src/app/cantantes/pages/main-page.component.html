@@ -1,0 +1,11 @@
+
+<div>
+  <div class="row">
+    <div class="col">
+    <app-cantantes-table [cantantesList]="cantantes"></app-cantantes-table>
+    </div>
+    <div class="col">
+      <app-cantantes-form (onNewCantante)="add($event)"></app-cantantes-form>
+    </div>
+  </div>
+</div>
